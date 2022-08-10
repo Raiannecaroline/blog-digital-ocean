@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.oceanbrasil.com/" target="_blank">Clique para ir para a Ocean Brasil</a>
+    
+        {% if usuario[2] == "Aluna" %}
+            <h2>Bem-vinda Aluna</h2>
+        {%else%}
+            <h2>Bem-vinda Professor</h2>
+        {%endif%}
+
+        {% for aluno in alunos %}
+            <h3>{{aluno}}</h3>
+        {%endfor%}
+
+
+    <h1>{{nome}}</h1>
+    <h2> raianecaroline.st@gmail.com</h2>
+    <h3>(73) 98242 - 7377</h3>
+</body>
+</html>
