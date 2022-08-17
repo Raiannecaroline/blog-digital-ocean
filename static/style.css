@@ -1,0 +1,35 @@
+html{
+    height: 10%;
+    background: #eee;
+    padding: 1rem;
+}
+
+body{
+    max-width: 960px;
+    margin: 0 auto;
+    background: #ffff;
+}
+
+.post .about{
+    color: slategray;
+    font-style: italic;
+    
+}
+
+content{
+    padding: 0 1rem 1rem;
+}
+
+h1{
+    color: #188ce1;
+    font-family: serif;
+    margin: 1rem 0;
+}
+
+hr{
+    border: 1px solid #45fff4;
+}
+
+.post .body{
+    white-space: pre-line;
+}
