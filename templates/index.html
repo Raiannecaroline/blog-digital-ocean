@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-
 {% extends 'base.html' %}
-    {% block content%}
-        <a href="https://www.oceanbrasil.com/" target="_blank">Clique para ir para a Ocean Brasil</a>
-        
-            {% if usuario[2] == "Aluna" %}
-                <h2>Bem-vinda Aluna</h2>
-            {%else%}
-                <h2>Bem-vinda Professor</h2>
-            {%endif%}
-
-            {% for aluno in alunos %}
-                <h3>{{aluno}}</h3>
-            {%endfor%}
-
-
-        <h1>{{nome}}</h1>
-        <h2> raianecaroline.st@gmail.com</h2>
-        <h3>(73) 98242 - 7377</h3>
-    {%endblock%}
+    {% block content %}
+        {% for posts in posts %}
+            <article class="post">
+                <header>
+                    <div>
+                        <h1>{{ posts.title }}</h1>
+                    <div class="about"> Criado por {{ posts['author'] }} em {{ posts['created'] }}</div>
+                    </div>
+                </header>
+                <p class="body"> {{ posts['body'] }}</p>
+            </article>
+            {% if not loop.last %}
+            <hr>
+            {% endif %}
+        {% endfor %}
+    {% endblock%}
